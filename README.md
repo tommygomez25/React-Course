@@ -1,1 +1,1 @@
-# Project developed during the Modern React with Redux Course
+### Project developed during the Modern React with Redux Course
