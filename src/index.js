@@ -2,6 +2,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from './App';
 
 // 2) Get a reference to the div with ID root
 
@@ -11,12 +12,6 @@ const el = document.getElementById('root');
 
 const root = ReactDOM.createRoot(el);
 
-// 4) Create a component
-
-function App () {
-    return <h1>Hi there!</h1>;
-}
-
-// 5) Show the component to the screen
+// 4) Show the component to the screen
 
 root.render(<App />);
