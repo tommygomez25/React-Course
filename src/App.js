@@ -1,44 +1,37 @@
+import 'bulma/css/bulma.css';
+import ProfileCard from "./ProfileCard";
+import AlexaImage from './images/alexa.png'; // since alexa.png is less than 9.7 kb, gets inlined (it is converted to base 64)
+import CortanaImage from './images/cortana.png';
+import SiriImage from './images/siri.png'; // since siri.png is more than 9.7 kb, gets treated as separate file
+
 function App() {
-
-    const count = 10;
-    const name = 'Jane';
-    const booleanTrue = true;
-    const booleanFalse = false;
-    const nullValue = null;
-    const undefinedValue = undefined;
-
-    return (
-        <><div
-            style={{
-                height: '100px',
-                width: '100px',
-                backgroundColor: 'lightblue',
-            }}
-        >   </div>
-        <ul>
-                <li>Number: {count}</li>
-                <li>String: {name}</li>
-                <li>True: {booleanTrue}</li>
-                <li>False: {booleanFalse}</li>
-                <li>Null: {nullValue}</li>
-                <li>Undefined: {undefinedValue}</li>
-        </ul>
-        <img
-      src="https://picsum.photos/150/150" alt="This is a randomly picked photo"
-        />
-        <p
-      style={{
-        fontWeight: 'bold',
-        fontStyle: 'italic',
-        color: 'blue',
-      }}
-    >
-      Hi there
-    </p>
-    </>
-
-    );
-
+  return (
+    <div>
+      <section className='hero is-primary'>
+        <div className='hero-body'>
+          <p className='title'>Personal Digital Assistants</p>
+        </div>
+      </section>
+      <div className='container'>
+        <section className='section'>
+          <div className='columns'>
+            <div className='column is-4'>
+              <ProfileCard title = "Alexa" handle = "@alexa99" image = {AlexaImage}
+              description = "Alexa was created by Amazon"/>
+            </div>
+            <div className='column is-4'>
+              <ProfileCard title = "Cortana" handle = "@cortana32" image = {CortanaImage}
+              description = "Cortana was made by Microsoft"/>
+            </div>
+            <div className='column is-4'>
+              <ProfileCard title = "Siri" handle = "@siri01" image = {SiriImage}
+              description = "Siri was created by Apple"/>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
 }
 
 export default App;
