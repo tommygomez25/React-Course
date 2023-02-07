@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from './App';
+import './index.css';
 
 // 2) Get a reference to the div with ID root
 
